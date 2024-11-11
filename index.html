@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Detect Environment Plugin Test</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.detect-environment.min.js"></script>
+    <style>
+      /* Basic styles to show different environments */
+      .device-mobile body {
+        background-color: #e0f7fa;
+      }
+      .device-desktop body {
+        background-color: #ffe0b2;
+      }
+      .prefers-dark-mode body {
+        color: #fff;
+        background-color: #424242;
+      }
+      .prefers-light-mode body {
+        color: #000;
+        background-color: #fff;
+      }
+      .status-online body:before {
+        content: 'Online';
+        display: block;
+        color: green;
+        text-align: center;
+        font-weight: bold;
+      }
+      .status-offline body:before {
+        content: 'Offline';
+        display: block;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Detect Environment Plugin Test</h1>
+    <p>
+      The plugin has dynamically added classes to the
+      <code>&lt;html&gt;</code> element based on your environment.
+    </p>
+    <p>Current classes on the <code>&lt;html&gt;</code> tag:</p>
+    <p>
+      <code id="html-classes"></code>
+    </p>
+
+    <script>
+      $(document).ready(function () {
+        // Update and display the current classes on the <html> element
+        function displayHtmlClasses() {
+          $('#html-classes').text($('html').attr('class'));
+        }
+
+        // Initial display
+        displayHtmlClasses();
+
+        // Update display when the environment changes
+        $(window).on('resize orientationchange', displayHtmlClasses);
+        window.addEventListener('online', displayHtmlClasses);
+        window.addEventListener('offline', displayHtmlClasses);
+      });
+    </script>
+  </body>
+</html>
