@@ -1,0 +1,24 @@
+{
+  "name": "jquery-detect-environment",
+  "version": "1.0.0",
+  "description": "A lightweight jQuery plugin that dynamically adds CSS classes to the html tag",
+  "main": "jquery.detect-environment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "modeusweb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modeusweb/jquery-detect-environment.git"
+  },
+  "homepage": "https://jquery-detect-environment.vercel.app/",
+  "keywords": [
+    "jquery",
+    "detect",
+    "environment"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "jquery": ">=3.0.0"
+  }
+}
