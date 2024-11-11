@@ -2,6 +2,10 @@
 
 A lightweight jQuery plugin that dynamically adds CSS classes to the `<html>` tag based on the device type, operating system, screen size, orientation, browser, internet connection, time of day, color scheme preference, and pixel density. This helps create responsive and adaptive designs easily.
 
+## Demo
+
+[View Live Demo](https://jquery-detect-environment.vercel.app/)
+
 ## Features
 
 The plugin automatically detects and adds classes for:
